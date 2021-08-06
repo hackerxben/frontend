@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="dropdown">
+          <button id="dLabel" type="button" data-bs-toggle="dropdown" aria-expanded="true">
+            Dropdown trigger
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dLabel">
+            <li>Hello</li>
+            <li>Hi</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row" *ngFor="let user of users">
+      <div class="col">
+        {{user.username}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button class="btn btn-primary" (click)="showDeployments()" >Show Deployments</button>
+      </div>
+      <div class="col">
+        <button class="btn btn-danger" (mouseleave)="hideApplications()"  (mouseover)="showApplications()"  >Show Applications</button>
+      </div>
+    </div>
+    <div class="row">
+      <div id="deployments" class="col hidden">
+        <app-deployments></app-deployments>
+      </div>
+      <div id="applications" class="col hidden">
+        <app-applications></app-applications>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
